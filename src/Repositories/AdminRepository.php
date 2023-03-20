@@ -388,7 +388,7 @@ class AdminRepository
 				$row['CUSTOMER_NAME'],
 				$row['CUSTOMER_EMAIL'],
 				$row['CUSTOMER_PHONE'],
-				$row['COMMENT'] ?? '',
+				($row['COMMENT'] === null || $row['COMMENT'] === 'NULL') ? '' : $row['COMMENT'],
 				$row['STATUS'],
 			];
 		}
